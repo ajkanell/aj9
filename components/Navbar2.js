@@ -1,8 +1,6 @@
 import { useState } from "react";
-import { HiMenu, HiOutlineX } from "react-icons/hi";
 import Link from "next/link";
 import { RiMenuLine, RiCloseLine } from "react-icons/ri";
-import Ajsvg from "../components/ajsvg";
 
 export default function Navbar2() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -16,7 +14,37 @@ export default function Navbar2() {
                 onClick={() => setNavbarOpen(false)}
                 className=" font-bold leading-relaxed w-20  whitespace-no-wrap uppercase -mb-16 pb-2 "
               >
-                <Ajsvg />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 303 425">
+                  <g
+                    id="Group_1"
+                    data-name="Group 1"
+                    transform="translate(-756 -380)"
+                  >
+                    <rect
+                      id="Rectangle_1"
+                      data-name="Rectangle 1"
+                      width="303"
+                      height="53"
+                      transform="translate(756 496)"
+                      fill="#3b82f6"
+                    />
+                    <text
+                      id="A.J._"
+                      data-name="A.J.
+"
+                      transform="translate(775 534)"
+                      fill="#fff"
+                      font-size="147"
+                      font-family="Poppins-Bold, Poppins"
+                      font-weight="700"
+                    >
+                      <tspan x="0" y="0">
+                        A.J.
+                      </tspan>
+                      <tspan x="0" y="220"></tspan>
+                    </text>
+                  </g>
+                </svg>
               </a>
             </Link>
             <button
