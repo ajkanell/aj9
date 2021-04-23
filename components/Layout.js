@@ -16,9 +16,7 @@ export default function Layout({ children, title }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <main className="flex justify-center items-center min-h-screen sm:mb-12 -mt-20 sm:-mt-12">
-        {children}
-      </main>
+      <main className="">{children}</main>
     </div>
   );
 }

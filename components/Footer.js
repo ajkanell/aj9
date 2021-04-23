@@ -75,6 +75,7 @@ export default function Footer() {
             <a
               key={item.name}
               href={item.href}
+              target="_blank"
               className="text-gray-400 transition-opacity hover:text-gray-500"
             >
               <span className="sr-only">{item.name}</span>
@@ -83,7 +84,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="mt-8 text-center text-base text-gray-400">
-          &copy; 2020 A.J. Kanell. All rights reserved.
+          &copy; 2021 A.J. Kanell. All rights reserved.
         </p>
       </div>
     </footer>

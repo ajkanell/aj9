@@ -49,43 +49,13 @@ const navigation = {
 };
 export default function Home({ posts = [] }) {
   return (
-    <div className="relative bg-gray-50 overflow-hidden min-h-screen">
-      <>
-        <main className="mt-20 mx-auto sm:max-w-2xl px-4 sm:mt-16">
-          <div className="sm:text-left text-center">
-            <div className="flex sm:flex-row flex-col justify-between">
-              <div className="sm:hidden block ">
-                <Image
-                  src="/images/home.png"
-                  alt="A.J Kanell"
-                  width={146}
-                  height={146}
-                />
-              </div>
-              <div className="mt-2">
-                <Fade cascade>
-                  <h1 className="text-8xl text-gray-900 sm:text-9xl">
-                    A.J. KANELL
-                  </h1>
-                  <p className="   text-gray-900 text-xl">
-                    PLAY-BY-PLAY BROADCASTER
-                  </p>
-                </Fade>
-                <div className="mt-4 flex justify-center space-x-6 sm:hidden">
-                  {navigation.social.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-gray-900 hover:text-gray-500"
-                    >
-                      <span className="sr-only">{item.name}</span>
-                      <item.icon className="h-6 w-6" aria-hidden="true" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-              <Fade>
-                <div className="sm:block hidden pt-2">
+    <Layout title="A.J. KANELL | PLAY-BY-PLAY BROADCASTER">
+      <div className="relative bg-gray-50 overflow-hidden min-h-screen">
+        <>
+          <main className="mt-20 mx-auto sm:max-w-2xl px-4 sm:mt-16 mb-24">
+            <div className="sm:text-left text-center">
+              <div className="flex sm:flex-row flex-col justify-between">
+                <div className="sm:hidden block ">
                   <Image
                     src="/images/home.png"
                     alt="A.J Kanell"
@@ -93,15 +63,47 @@ export default function Home({ posts = [] }) {
                     height={146}
                   />
                 </div>
-              </Fade>
+                <div className="mt-2">
+                  <Fade cascade>
+                    <h1 className="text-8xl text-gray-900 sm:text-9xl">
+                      A.J. <span>KANELL</span>
+                    </h1>
+                    <p className="   text-gray-900 text-xl">
+                      PLAY-BY-PLAY BROADCASTER
+                    </p>
+                  </Fade>
+                  <div className="mt-4 flex justify-center space-x-6 sm:hidden">
+                    {navigation.social.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="text-gray-900 hover:text-gray-500"
+                      >
+                        <span className="sr-only">{item.name}</span>
+                        <item.icon className="h-6 w-6" aria-hidden="true" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+                <Fade>
+                  <div className="sm:block hidden pt-2">
+                    <Image
+                      src="/images/home.png"
+                      alt="A.J Kanell"
+                      width={146}
+                      height={146}
+                    />
+                  </div>
+                </Fade>
+              </div>
             </div>
-          </div>
-          <div className=" flex justify-center mt-8">
-            <TV key={posts[0].sys.id} src={posts[0].fields.youtubeLink} />
-          </div>
-        </main>
-      </>
-    </div>
+            <div className=" flex justify-center mt-8">
+              <TV key={posts[0].sys.id} src={posts[0].fields.youtubeLink} />
+            </div>
+          </main>
+        </>
+      </div>
+    </Layout>
   );
 }
 

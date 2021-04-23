@@ -52,6 +52,7 @@ export default function Flag() {
             <a
               key={item.name}
               href={item.href}
+              target="_blank"
               className="text-gray-50 transition-opacity"
             >
               <span className="sr-only">{item.name}</span>
