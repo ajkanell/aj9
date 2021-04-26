@@ -1,4 +1,3 @@
 # A.J Kanell Website
 
-Check it out [here](https://tailwindcss.com/) (v2) with Next.js. I used tailwind, and contentful.
-
+Check it out [here](https://ajkanell.com/). I used Nextjs, Tailwindcss, and Contentful as a CMS.
