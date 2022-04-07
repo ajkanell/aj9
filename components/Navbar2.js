@@ -62,7 +62,7 @@ export default function Navbar2() {
             }
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto lg:space-x-8">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link href="/tv">
                   <a
                     onClick={() => setNavbarOpen(false)}
@@ -71,8 +71,8 @@ export default function Navbar2() {
                     <span className="">TV</span>
                   </a>
                 </Link>
-              </li>
-              <li className="nav-item">
+              </li> */}
+              {/* <li className="nav-item">
                 <Link href="/radio">
                   <a
                     onClick={() => setNavbarOpen(false)}
@@ -81,7 +81,7 @@ export default function Navbar2() {
                     <span className="">Radio</span>
                   </a>
                 </Link>
-              </li>
+              </li> */}
               {/* <li className="nav-item">
                 <a
                   className=" py-2 flex items-center text-sm  font-bold leading-snug  hover:opacity-75"
@@ -91,15 +91,6 @@ export default function Navbar2() {
                   <span className="">Writing</span>
                 </a>
               </li> */}
-              <li className="nav-item">
-                <a
-                  className=" py-2 flex items-center text-sm  font-bold leading-snug transition-opacity hover:opacity-75"
-                  href="https://podcasts.apple.com/us/podcast/coaches-4-change/id1536640509"
-                  target="_blank"
-                >
-                  <span className="">C4C Podcast</span>
-                </a>
-              </li>
               <li className="nav-item">
                 <Link href="/resume">
                   <a

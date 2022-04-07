@@ -30,29 +30,14 @@ const navigation = {
         </svg>
       ),
     },
-    {
-      name: "Youtube",
-      href: "https://www.youtube.com/user/KanellNewhouse",
-      icon: (props) => (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-        >
-          <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
-        </svg>
-      ),
-    },
   ],
 };
-export default function Home({ posts = [] }) {
+export default function Home() {
   return (
     <Layout title="A.J. KANELL | PLAY-BY-PLAY BROADCASTER">
-      <div className="relative bg-gray-50 overflow-hidden min-h-screen">
+      <div className="flex items-center justify-center bg-gray-50 overflow-hidden min-h-screen">
         <>
-          <main className="mt-20 mx-auto sm:max-w-2xl px-4 sm:mt-16 mb-24">
+          <main className="-mt-20 mx-auto sm:max-w-2xl px-4 mb-24">
             <div className="sm:text-left text-center">
               <div className="flex sm:flex-row flex-col justify-between">
                 <div className="sm:hidden block ">
@@ -97,9 +82,24 @@ export default function Home({ posts = [] }) {
                 </Fade>
               </div>
             </div>
-            <div className=" flex justify-center mt-8">
-              <TV key={posts[0].sys.id} src={posts[0].fields.youtubeLink} />
+            <div>
+              <h3 className="text-xl mt-6 leading-7">
+                Welcome! I am a play-by-play broadcaster for the Pac-12 Network.
+                You can catch me on the call for a wide variety of events on the
+                network owned and operated by the Conference of Champions. I am
+                also proud to have served as an NCAA D-I men's basketball radio
+                voice for more than 10 years. For questions or comments, feel
+                free to visit the{" "}
+                <a href="/contact" className="text-blue-400">
+                  contact me
+                </a>{" "}
+                page.
+              </h3>
+              <p>- A.J.</p>
             </div>
+            {/* <div className=" flex justify-center mt-8">
+              <TV key={posts[0].sys.id} src={posts[0].fields.youtubeLink} />
+            </div> */}
           </main>
         </>
       </div>
@@ -108,21 +108,21 @@ export default function Home({ posts = [] }) {
 }
 
 // get static props
-export async function getStaticProps() {
-  // Create an instance of the Contentful JavaScript SDK
-  const client = require("contentful").createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-  });
+// export async function getStaticProps() {
+//   // Create an instance of the Contentful JavaScript SDK
+//   const client = require("contentful").createClient({
+//     space: process.env.CONTENTFUL_SPACE_ID,
+//     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+//   });
 
-  // Fetch all entries of content_type `RESUME`
-  const posts = await client
-    .getEntries({ content_type: "homePageVideo" })
-    .then((response) => response.items);
+//   // Fetch all entries of content_type `RESUME`
+//   const posts = await client
+//     .getEntries({ content_type: "homePageVideo" })
+//     .then((response) => response.items);
 
-  return {
-    props: {
-      posts,
-    },
-  };
-}
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
+// }

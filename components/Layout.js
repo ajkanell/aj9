@@ -10,7 +10,7 @@ export default function Layout({ children, title }) {
         <title>{title}</title>
         <meta
           name="description"
-          content="View a selection of A.J. Kanell’s broadcast work - Learn about A.J.‘s wide-ranging experience - Get in touch with A.J."
+          content="View a selection of A.J. Kanell's broadcast work - Learn about A.J.'s wide-ranging experience - Get in touch with A.J."
         />
         <meta property="og:image" content={siteTitle} />
         <meta name="og:title" content={siteTitle} />
