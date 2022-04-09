@@ -37,7 +37,7 @@ export default function Home() {
     <Layout title="A.J. KANELL | PLAY-BY-PLAY BROADCASTER">
       <div className="flex items-center justify-center bg-gray-50 overflow-hidden min-h-screen">
         <>
-          <main className="-mt-20 mx-auto sm:max-w-2xl px-4 mb-24">
+          <main className="mt-10 md:-mt-20 mx-auto sm:max-w-2xl px-4 md:mb-0">
             <div className="sm:text-left text-center">
               <div className="flex sm:flex-row flex-col justify-between">
                 <div className="sm:hidden block ">
@@ -83,19 +83,21 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h3 className="text-xl mt-6 leading-7">
+              <h3 className="text-sm text-center mt-6 leading-7 font-norm sm:text-left">
                 Welcome! I am a play-by-play broadcaster for the Pac-12 Network.
                 You can catch me on the call for a wide variety of events on the
                 network owned and operated by the Conference of Champions. I am
                 also proud to have served as an NCAA D-I men's basketball radio
                 voice for more than 10 years. For questions or comments, feel
                 free to visit the{" "}
-                <a href="/contact" className="text-blue-400">
+                <a href="/contact" className=" text-blue-400">
                   contact me
                 </a>{" "}
                 page.
               </h3>
-              <p>- A.J.</p>
+              <p className="text-center font-norm pt-3 font-semibold sm:text-left">
+                - A.J.
+              </p>
             </div>
             {/* <div className=" flex justify-center mt-8">
               <TV key={posts[0].sys.id} src={posts[0].fields.youtubeLink} />
